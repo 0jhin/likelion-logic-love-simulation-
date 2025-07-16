@@ -47,11 +47,16 @@ fun main() {
     // 최대 질문 횟수
 
     val question = listOf("질문 1", "질문 2", "질문 3", "질문 4", "질문 5", "질문 6", "질문 7", "질문 8", "질문 9", "질문 10", "질문 11", "질문 12", "질문 13", "질문 14", "질문 15", "질문 16", "질문 17", "질문 18", "질문 19", "질문 20")
-    // 질문 내용(디테일한 질문은 생략
+    // 질문 내용(디테일한 질문은 생략)
 
     var questionIndex = 0
     // 질문 내용 리스트 접근용 index
 
+    var question2 = listOf("")
+    // 나왔던 질문 보관용 list
+
+    var questionIndex2 = 0
+    // 나왔던 질문 보관용 list 접근용 index
 
 //================================사전 변수 / 상수 선언================================================
 
@@ -73,26 +78,21 @@ fun main() {
 //========================================게임 시작================================================
 
 //=================================사용자 입력 오류================================================
-    if (isValidAnswer == false) { // "Y"나 "N"가 아니라면(false라면) 실행
-        while (isValidAnswer == false) { // "Y"나 "N"가 아니라면(false라면) 실행
+        while (!isValidAnswer) { // "Y"나 "N"가 아니라면(false라면) 실행
             println(errorInput) //입력 에러 메세지 출력
             var startGame2 : String? = readLine() // 게임 시작 답 다시 입력
-            if (startGame2 == "Y"){ // 여기서 Y 입력하면 게임 시작으로 이동하도록 구현 필요 // 되는데?? 뭐지??
-                println(gameStarted)
-                break
-            } else if (startGame2 == "N"){ // 응용해서 N 입력하면 게임 탈출하도록 구현함
-                println(endGame)
-                return
+            if (startGame2 == "Y" || startGame2 == "N" ){ // 여기서 Y 나 N입력하면 if 진입
+                startGame = startGame2 // 만약 값이 N이라면 다음 if에서 return하기 위해 값 재할당
+                isValidAnswer = true // 정상적인 입력을 받았으니 플래그 변경으로 반복문 종료
             }
-
         }
 
-    }
+
 //=================================사용자 입력 오류================================================
 
 
 //=================================사용자 게임 종료================================================
-    else if (startGame == "N") { // N 입력하면 게임 종료
+    if (startGame == "N") { // N 입력하면 게임 종료
         println(endGame)
         return
     }
@@ -103,11 +103,15 @@ fun main() {
     var favorability : Int = 0
     // 변수로 기본 호감도 생성 : 0
 
+    var indexfavorit : Int = 20
+    // 질문 갯수 만큼의 수
+
     val score0 : String = "우리 헤어져"
     val scoreOver0Under5 : String = "당분간 연락하지마"
     val scoreOver0Under10 : String = "우리 생각할 시간을 가지자"
     val score10Over : String = "나와 결혼해줄래"
 
+    println(gameStarted)
     println()
     println("현재 애정도 : $favorability")
     //시작 전 현재 애정도 사용자 전달용
@@ -115,7 +119,8 @@ fun main() {
     while (count <= maxCount) {
         print("$count 번째 질문: ")
         println(question[questionIndex]) // 질문
-        questionIndex++ // 다음 질문 넘어가기 위해 +1
+//        questionIndex++ // 다음 질문 넘어가기 위해 +1
+        question[--indexfavorit]
         print("당신의 대답은? : ")
         val answer: String? = readLine()
         var isValidAnswer2 = if (answer == "Y" || answer == "N") true else false // 질문에 대한 사용자 입력이 "Y"나 "N"가 맞으면 true 아니라면 false

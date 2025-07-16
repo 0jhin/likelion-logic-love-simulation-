@@ -1,13 +1,23 @@
-//package com.example.myapplication2
-//
 //fun main() {
-//    print("숫자를 입력하세요: ")
-//    val input = readLine()           // 문자열로 입력 받기
-//    val number = input?.toInt()      // null 체크 후 정수로 변환
+//    var isValidAnswer = false
 //
-//    if (number != null) {
-//        println("입력한 숫자는 $number 입니다.")
-//    } else {
-//        println("유효한 숫자가 아닙니다.")
+//    while (!isValidAnswer) {
+//        print("게임을 시작하시겠습니까? (Y/N)")
+//        val startGame = readln().uppercase()                        //여기
+//
+//        when (startGame) {
+//            "Y" -> {
+//                isValidAnswer = true
+//                DatingSimulationGame().startGame() // 게임 시작      //여기
+//            }
+//
+//            "N" -> {
+//                isValidAnswer = true
+//            }
+//
+//            else -> {
+//                println("⚠️ 잘못된 입력입니다. Y 또는 N을 입력해주세요.")
+//            }
+//        }
 //    }
-//}
+//}Í

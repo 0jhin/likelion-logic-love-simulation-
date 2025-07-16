@@ -1,6 +1,7 @@
 package com.example.myapplication2
 
 fun main() {
+    //while을 이용한 반복 예제
 
     // 0 ~ 100 사이의 정답이 있음
     // 20번 반복
@@ -52,39 +53,3 @@ fun main() {
 
 
 }
-
-
-
-
-//fun main() {
-//
-//    var someValue1: Int = 123
-//    var someValue2: String = "123"
-//    var someValue3: Boolean = true
-//    var someValue4: Any = "dsadw"
-//    var someValue5: String? = null
-//    var someValue6: Any? = null
-//
-//    var someObject : Any = Any()
-//
-//    var otherObject = someObject
-//
-//    var someArray =arrayListOf(1,2,3)
-//
-//    println("Hello World")
-//}
-
-
-//fun main() {
-//    while (true){
-//        readLine()
-//        println("[TEST 6]")
-//        println("작업중")
-//        println("[TEST 8]")
-////        break
-//        return
-//        println("[TEST 10]")
-//    }
-//
-//    println("[TEST 13]")
-//}
