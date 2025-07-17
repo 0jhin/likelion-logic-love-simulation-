@@ -5,12 +5,16 @@ import kotlin.math.tan
 
 fun main(){
 
-
+    // 범위 생성
+    // 사용자 입력
+    // 받은 입력 정수 변환
+    // 변수에 바로 조건으로 값 할당 = 받은 입력이 범위 내에 있는지 체크 + 조건 실행으로 결과에 따라 값 변경
     val checkRange = 0..10
     print("숫자 입력 : ")
-    var inputNumber : Int = readln().toInt()
-    var checkNumber : Any = if (checkRange.contains(inputNumber)) "오케이" else "실패"
-    println(checkNumber)
+    var inputNumber : Int = readln().toInt() //입력은 무조건 문자로 받음 = 입력 받은 문자를 숫자로 변환
+    var checkNumber : String = if (checkRange.contains(inputNumber)) "오케이" else "실패" // 입력 받은 숫자(inputNumber)가 생성 한 범위(checkRange) 내에 있는지 확인 = 변수(checkNumber)에 있으면 "오케이" 없으면 "실패" 입력
+    println(checkNumber) // 위의 결과에 따라 "오케이" 혹은 "실패" 출력
+
 
 //    val first : Int = 3
 //    val second : Int = 1
