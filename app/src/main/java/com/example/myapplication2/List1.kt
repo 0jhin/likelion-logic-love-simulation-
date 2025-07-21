@@ -2,6 +2,7 @@ package com.example.myapplication2
 
 fun main(){
 
+    // 인덱스 활용해서 리스트 할당
     var myDigitals : MutableList<String> = mutableListOf<String>("Iphone 16", "Galaxy S24+", "Galaxy Tap 9", "MacbookPro")
 
     myDigitals.add(0, "dsa")
