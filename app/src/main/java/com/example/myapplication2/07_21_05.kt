@@ -2,6 +2,7 @@ package com.example.myapplication2
 
 fun main(){
 
+    //복습
     val numberList = listOf<Int>(1, 2, 3, 4, 5).mapIndexed { index, i ->
     }
 
