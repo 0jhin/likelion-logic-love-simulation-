@@ -13,7 +13,7 @@ fun main(){
     println("결과 : ${calc(n2 = 1)}")
 }
 
-fun calc(n1 : Int = 0, n2 : Int) : Int {
+private fun calc(n1 : Int = 0, n2 : Int) : Int {
 //    var result = n1 + n2
 //    return result // 리턴 방법 1
     return n1 + n2 // 리턴 방법 2
